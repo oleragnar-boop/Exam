@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ole Ragnar Randen</title>
+</head>
+<body>
+    <h1>Ole Ragnar Randen - BWU Student</h1>
+    <div class="mainText">
+        <p>Here is some basic info about me:</p>
+        <ul>
+            <li>Name: Ole Ragnar Randen</li>
+            <li>Age: 21</li>
+        </ul>
+        <figure>
+        <img src="assets/me.jpg" alt="A picture of two handsome young men">
+        <figcaption>Me and my friend Isak (I'm the one to the left)</figcaption>
+        </figure>
+        <p>Hiya!</p> 
+        <p>My name is Ole Ragnar Randen. I am a 21 year old BWU student from Heidal, but i currently live in Raufoss.</p>
+        <p>I enjoy making music, playing video games and dancing.</p>
+        <p>Even though im currently a student at <abbr title="Norges tekninsk-naturvitenskapelige universitet">NTNU</abbr>, I have also studied psychology at <abbr title="Høgskolen i Innlandet">HINN</abbr> in Lillehammer.</p>
+        <p>Thank you for checking out my page!</p>
+    </div>
+    
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <script>
+        $(function() {
+    
+    
+       var people = [];
+    
+       $.getJSON('people.json', function(data) {
+           $.each(data.person, function(i, f) {
+              var tblRow = "<tr>" + "<td>" + f.name + "</td>" +
+               "<td>" + f.age + "</td>" + "<td>" + f.city + "</td>" + "<td>" + f.relation + "</td>" + "</tr>"
+               $(tblRow).appendTo("#userdata tbody");
+         });
+       });
+    });
+    </script>
+    <div class="wrapper">
+        <h2>JSON stuff</h2>
+    <div class="profile">
+       <table id= "userdata">
+      <thead>
+          <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Relation</th>
+            </tr>
+            </thead>
+          <tbody>
+           </tbody>
+        </table>
+    </div>
+    </div>
+    <div class="quiz">
+    <h2>Quiz</h2>
+    <form>
+        <p>How many hours are there in a day? </p>
+        <input type="radio" id="20" name="q1" value="0">
+        <label for="20">20</label><br>
+        <input type="radio" id="22" name="q1" value="0">
+        <label for="22">22</label><br>
+        <input type="radio" id="24" name="q1" value="1">
+        <label for="24">24</label>
+        <p>What is the capital of Norway? </p>
+        <input type="radio" id="Oslo" name="q2" value="1">
+        <label for="Oslo">Oslo</label><br>
+        <input type="radio" id="Bergen" name="q2" value="0">
+        <label for="Bergen">Bergen</label><br>
+        <input type="radio" id="Voss" name="q2" value="0">
+        <label for="Voss">Voss</label>
+        <p>What car manufacturer made the "940" model?</p>
+        <input type="radio" id="Fiat" name="q3" value="0">
+        <label for="Fiat">Fiat</label><br>
+        <input type="radio" id="Audi" name="q3" value="0">
+        <label for="Audi">Audi</label><br>
+        <input type="radio" id="Volvo" name="q3" value="1">
+        <label for="Volvo">Volvo</label>
+        <p>What country is known for making pizza and pasta?</p>
+        <input type="radio" id="Sweden" name="q4" value="0">
+        <label for="Sweden">Sweden</label><br>
+        <input type="radio" id="France" name="q4" value="0">
+        <label for="France">France</label><br>
+        <input type="radio" id="Italy" name="q4" value="1">
+        <label for="Italy">Italy</label>
+        <p>What console is the "Ratchet and clank" series mainly known from?</p>
+        <input type="radio" id="SNES" name="q5" value="0">
+        <label for="SNES">SNES</label><br>
+        <input type="radio" id="Xbox" name="q5" value="0">
+        <label for="Xbox">Xbox</label><br>
+        <input type="radio" id="PS2" name="q5" value="1">
+        <label for="PS2">PS2</label>
+    </form>
+    <input type="submit" value="Submit" onclick="getResult(), showResult()"><br/>
+    <p>Results:<span id="display"></span></p>
+    </div>
+    <script>
+        function getResult() {
+            var a = document.querySelector('input[name="q1"]:checked').value;
+            var b = document.querySelector('input[name="q2"]:checked').value;
+            var c = document.querySelector('input[name="q3"]:checked').value;
+            var d = document.querySelector('input[name="q4"]:checked').value;
+            var e = document.querySelector('input[name="q5"]:checked').value;
+    }
+    function showResult() {
+        var x= (a+b+c+d+e);
+        document.getElementById("display").innerHTML = x;
+    }
+    //could not get this to work//
+    </script>
+
+<form name="Contact" method="GET" action="index.html" onsubmit="setLocal()">
+    <p>First name</p>
+    <input type="text" name="fName" id="FN"> <br>
+    <p>Last name</p>
+    <input type="text" name="lName" id="LN"> <br>
+    <p>Age</p>
+    <input type="number" name="age" id="AGE"><br>
+    <p>Email</p>
+    <input type="text" name="email" id="EM">
+    <p>Address</p>
+    <input type="text" name="home" id="ADD">
+    <p>City</p>
+    <input type="text" name="city" id="CITY"> <br>
+    <input type="submit" name="sub" value="Submit">
+    </form>
+
+    <script>
+        function setLocal (){
+            this.fname=document.getElementById("FN").value;
+            this.lname=document.getElementById("LN").value;
+            this.age=document.getElementById("AGE").value;
+            this.email=document.getElementById("EM").value;
+            this.addr=document.getElementById("ADD").value;
+            this.city=document.getElementById("CITY").value;
+
+            let fname = this.fname;
+            let lname = this.lname;
+            let age = this.age;
+            let email = this.email;
+            let addr = this.addr;
+            let city = this.city;
+
+            localStorage.setItem("fname", fname);
+            localStorage.setItem("lname", lname);
+            localStorage.setItem("age", age);
+            localStorage.setItem("email", email);
+            localStorage.setItem("addr", addr);
+            localStorage.setItem("city", city);
+        }
+    </script>
+</body>
+</html>

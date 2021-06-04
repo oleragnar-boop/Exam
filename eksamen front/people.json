@@ -1,0 +1,24 @@
+{
+    "person": [  
+    {"name":"Ola", "age":"21", "city":"Oslo", "relation":"family"},
+    {"name":"Ingeborg", "age":"23", "city":"Oslo", "relation":"family"},
+    {"name":"Elisabeth", "age":"50", "city":"Heidal", "relation":"family"},
+    {"name":"Anders", "age":"22", "city":"Heidal", "relation":"friend"},
+    {"name":"Arne", "age":"22", "city":"Heidal", "relation":"friend"},
+    {"name":"Morten", "age":"22", "city":"Heidal", "relation":"friend"},
+    {"name":"Marcus", "age":"18", "city":"Raufoss", "relation":"friend"},
+    {"name":"Siri", "age":"20", "city":"Raufoss", "relation":"friend"},
+    {"name":"Vegar", "age":"21", "city":"Skjåk", "relation":"friend"},
+    {"name":"Henning", "age":"21", "city":"Stange", "relation":"friend"},
+    {"name":"Einar", "age":"23", "city":"Otta", "relation":"family"},
+    {"name":"Pernille", "age":"22", "city":"Heidal", "relation":"family"},
+    {"name":"Sofie", "age":"21", "city":"Raufoss", "relation":"friend"},
+    {"name":"Harald", "age":"18", "city":"Heidal", "relation":"family"},
+    {"name":"Simon", "age":"22", "city":"Oslo", "relation":"friend"},
+    {"name":"Iver", "age":"22", "city":"Oslo", "relation":"friend"},
+    {"name":"Mons", "age":"19", "city":"Barndbu", "relation":"friend"},
+    {"name":"Ole", "age":"22", "city":"Skjåk", "relation":"friend"},
+    {"name":"Sander", "age":"22", "city":"Vinstra", "relation":"friend"},
+    {"name":"Isak", "age":"21", "city":"Raufoss", "relation":"friend"}  
+]
+}  

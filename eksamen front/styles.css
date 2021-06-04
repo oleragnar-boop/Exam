@@ -1,0 +1,48 @@
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.mainText{
+    border-color: darkgrey;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 30px;
+    max-width: 70%;
+    margin: 25px auto;
+    overflow: hidden;
+}
+.wrapper{
+        border-color: darkgrey;
+        border-width: 10px;
+        border-style: solid;
+        border-radius: 30px;
+        max-width: 70%;
+        margin: 0 auto;
+        overflow: hidden;
+}
+#userdata{
+    padding: 20px 0 20px 0;
+    max-width: 90%;
+    margin: 0 auto;
+}
+p{
+    padding: 20px 0 20px 0;
+    max-width: 90%;
+    margin: 0 auto;
+}
+ul{
+    max-width: 40%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+img{
+    max-width: 50%;
+    border-radius: 25% 10%;
+}
+figcaption{
+    font-size: 12px;
+    font-style: italic;
+}
